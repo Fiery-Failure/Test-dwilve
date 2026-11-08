@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corner Cup Café</title>
+  <meta name="description" content="Coffee, pastries and a quiet table. Open daily.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f3f0f7;
+      --ink: #231a2e;
+      --ube: #5b3a8c;
+      --pandan: #55803f;
+      --sun: #f0b84a;
+      --line: #cfc7dc;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: "Bricolage Grotesque", system-ui, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    a { color: var(--ube); }
+    a:focus-visible { outline: 3px solid var(--sun); outline-offset: 3px; }
+    .wrap { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+
+    header.top { padding: 1.25rem 0; border-bottom: 1px solid var(--line); }
+    header.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .logo { font-weight: 800; font-size: 1.25rem; text-decoration: none; color: var(--ink); }
+    nav a { margin-left: 1.25rem; text-decoration: none; font-weight: 600; }
+    nav a:hover { text-decoration: underline; }
+
+    .hero { padding: 4rem 0 3.5rem; background: var(--ube); color: #fff; }
+    .hero h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(3rem, 11vw, 7.5rem);
+      line-height: .95;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+    .hero p { max-width: 34rem; font-size: 1.25rem; margin: 0 0 2rem; }
+    .btn {
+      display: inline-block;
+      padding: .8rem 1.6rem;
+      background: var(--sun);
+      color: var(--ink);
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+    }
+    .btn:hover { background: #fff; }
+    .btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+    section { padding: 3.5rem 0; }
+    h2 { font-size: 2rem; margin: 0 0 1.5rem; letter-spacing: -0.01em; }
+
+    .menu { display: grid; gap: 2.5rem 4rem; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); }
+    .menu h3 { margin: 0 0 .75rem; color: var(--pandan); font-size: 1.2rem; }
+    .menu ul { list-style: none; margin: 0; padding: 0; }
+    .menu li { display: flex; align-items: baseline; gap: .5rem; padding: .35rem 0; }
+    .menu li::after { content: ""; order: 1; flex: 1; border-bottom: 2px dotted var(--line); }
+    .menu li span:first-child { order: 0; }
+    .menu li span:last-child { order: 2; font-weight: 600; }
+
+    .visit { background: #fff; border-top: 1px solid var(--line); }
+    .visit .grid { display: grid; gap: 2rem 4rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+    .hours { margin: 0; padding: 0; list-style: none; }
+    .hours li { display: flex; justify-content: space-between; max-width: 18rem; padding: .2rem 0; }
+
+    footer { padding: 2rem 0; font-size: .95rem; }
+  </style>
+</head>
+<body>
+
+  <header class="top">
+    <div class="wrap">
+      <a class="logo" href="#">Corner Cup Café</a>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#visit">Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="hero">
+      <div class="wrap">
+        <h1>Coffee, made slow.</h1>
+        <p>Freshly roasted beans, warm pastries and a table by the window. Come in for a cup, stay for the afternoon.</p>
+        <a class="btn" href="#menu">See the menu</a>
+      </div>
+    </div>
+
+    <section id="menu">
+      <div class="wrap">
+        <h2>Menu</h2>
+        <div class="menu">
+          <div>
+            <h3>Coffee</h3>
+            <ul>
+              <li><span>Espresso</span><span>₱90</span></li>
+              <li><span>Americano</span><span>₱110</span></li>
+              <li><span>Cappuccino</span><span>₱130</span></li>
+              <li><span>Café latte</span><span>₱140</span></li>
+              <li><span>Ube latte</span><span>₱160</span></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Food</h3>
+            <ul>
+              <li><span>Butter croissant</span><span>₱95</span></li>
+              <li><span>Banana bread</span><span>₱85</span></li>
+              <li><span>Ham and cheese sandwich</span><span>₱165</span></li>
+              <li><span>Chocolate chip cookie</span><span>₱70</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="visit" class="visit">
+      <div class="wrap grid">
+        <div>
+          <h2>Visit us</h2>
+          <p>123 Sample Street<br>Your Barangay, Your City</p>
+          <p><a href="tel:+630000000000">+63 000 000 0000</a><br>
+             <a href="mailto:hello@example.com">hello@example.com</a></p>
+        </div>
+        <div>
+          <h2>Hours</h2>
+          <ul class="hours">
+            <li><span>Monday to Friday</span><span>7am to 8pm</span></li>
+            <li><span>Saturday</span><span>8am to 9pm</span></li>
+            <li><span>Sunday</span><span>8am to 6pm</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Corner Cup Café</div>
+  </footer>
+
+</body>
+</html>
